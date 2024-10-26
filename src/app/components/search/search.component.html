@@ -1,0 +1,15 @@
+<div class="search-container">
+    <h2>Find Your Travel Destination</h2>
+    <input type="text" [(ngModel)]="destination" placeholder="Enter destination" />
+    <button (click)="onSearch()">Search</button>
+
+    <div *ngIf="results.length > 0">
+        <h3>Search Results:</h3>
+        <ul class="results-list">
+            <li *ngFor="let result of results" class="result-item">
+                <span>{{ result.name }} - ${{ result.price }}</span>
+                <button (click)="book(result)">Book Now</button>
+            </li>
+        </ul>
+    </div>
+</div>

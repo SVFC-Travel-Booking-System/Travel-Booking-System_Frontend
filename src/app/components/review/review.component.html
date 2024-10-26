@@ -1,0 +1,15 @@
+<div class="review-container">
+    <h2 class="review-title">Submit Your Review</h2>
+    <form class="review-form" (ngSubmit)="submitReview()">
+        <label for="rating">Rating</label>
+        <input type="number" [(ngModel)]="review.rating" name="rating" min="1" max="5" required />
+
+        <label for="comment">Comment</label>
+        <textarea [(ngModel)]="review.comment" name="comment" required></textarea>
+
+        <button type="submit">Submit Review</button>
+    </form>
+
+    <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+</div>

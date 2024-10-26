@@ -1,0 +1,46 @@
+<div class="payment-container">
+    <h2>Payment Information</h2>
+
+    <form (ngSubmit)="onPay()">
+        <div class="form-group">
+            <label for="paymentMethod">Payment Method</label>
+            <select [(ngModel)]="paymentMethod" name="paymentMethod" required>
+              <option value="card">Credit/Debit Card</option>
+              <option value="gcash">GCash</option>
+          </select>
+        </div>
+
+        <!-- Card Payment Fields -->
+        <div *ngIf="paymentMethod === 'card'">
+            <div class="form-group">
+                <label for="name">Name on Card</label>
+                <input type="text" [(ngModel)]="paymentDetails.name" placeholder="John Doe" name="name" required />
+            </div>
+
+            <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" [(ngModel)]="paymentDetails.cardNumber" placeholder="1234 5678 9012 3456" name="cardNumber" required />
+            </div>
+
+            <div class="form-group">
+                <label for="expirationDate">Expiration Date</label>
+                <input type="text" [(ngModel)]="paymentDetails.expirationDate" placeholder="MM/YY" name="expirationDate" required />
+            </div>
+
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" [(ngModel)]="paymentDetails.cvv" placeholder="123" name="cvv" required />
+            </div>
+        </div>
+
+        <!-- GCash Payment Field -->
+        <div *ngIf="paymentMethod === 'gcash'">
+            <div class="form-group">
+                <label for="gcashNumber">GCash Mobile Number</label>
+                <input type="text" [(ngModel)]="paymentDetails.gcashNumber" placeholder="09XXXXXXXXX" name="gcashNumber" required />
+            </div>
+        </div>
+
+        <button type="submit">Pay Now</button>
+    </form>
+</div>

@@ -1,0 +1,25 @@
+<nav>
+    <ul>
+        <li>
+            <a routerLink="/" aria-label="Home">
+                <img src="assets/logo.png" alt="Voyage Liner Logo" class="logo">
+            </a>
+        </li>
+        <li><a routerLink="/" routerLinkActive="active" aria-label="Home">Home</a></li>
+        <li><a routerLink="/search" routerLinkActive="active" aria-label="Search travel options">Search</a></li>
+        <li><a routerLink="/booking" routerLinkActive="active" aria-label="Booking process">Booking</a></li>
+        <li><a routerLink="/payment" routerLinkActive="active" aria-label="Payment options">Payment</a></li>
+        <li><a routerLink="/itinerary" routerLinkActive="active" aria-label="Manage your itinerary">Itinerary</a></li>
+        <li><a routerLink="/reviews" routerLinkActive="active" aria-label="Customer reviews">Reviews</a></li>
+        <li><a routerLink="/login" routerLinkActive="active" aria-label="Login to your account">Login</a></li>
+        <li><a routerLink="/register" routerLinkActive="active" aria-label="Create a new account">Register</a></li>
+    </ul>
+</nav>
+
+<main>
+    <router-outlet></router-outlet>
+</main>
+
+<footer>
+    <p>© 2024 Voyage Liner Booking System. All rights reserved.</p>
+</footer>

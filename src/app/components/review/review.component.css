@@ -1,0 +1,107 @@
+.review-container {
+    background-color: white;
+    /* Background color for the review container */
+    padding: 2em;
+    /* Padding around the container */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    max-width: 600px;
+    /* Maximum width for the review container */
+    margin: 2em auto;
+    /* Centering the container */
+}
+
+.review-title {
+    font-size: 1.5em;
+    /* Font size for the title */
+    margin-bottom: 1em;
+    /* Spacing below the title */
+    text-align: center;
+    /* Center the title text */
+}
+
+.review-form {
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Stack elements vertically */
+}
+
+.review-form label {
+    margin-bottom: 0.5em;
+    /* Spacing below the label */
+    font-weight: bold;
+    /* Make labels bold */
+}
+
+.review-form input[type="number"] {
+    width: 100%;
+    /* Full width for rating input */
+    padding: 0.5em;
+    /* Padding inside input */
+    border: 1px solid #ccc;
+    /* Light border */
+    border-radius: 4px;
+    /* Rounded corners for input */
+    margin-bottom: 1em;
+    /* Spacing below the input */
+}
+
+.review-form textarea {
+    width: 100%;
+    /* Full width for comment textarea */
+    padding: 0.5em;
+    /* Padding inside textarea */
+    border: 1px solid #ccc;
+    /* Light border */
+    border-radius: 4px;
+    /* Rounded corners for textarea */
+    resize: vertical;
+    /* Allow vertical resizing only */
+    min-height: 100px;
+    /* Minimum height for textarea */
+    margin-bottom: 1em;
+    /* Spacing below the textarea */
+}
+
+.review-form button {
+    background-color: #2980b9;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    border: none;
+    /* No border */
+    padding: 0.5em;
+    /* Padding inside button */
+    border-radius: 4px;
+    /* Rounded corners for button */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth background transition */
+}
+
+.review-form button:hover {
+    background-color: #3498db;
+    /* Lighter shade on hover */
+}
+
+.success-message {
+    color: green;
+    /* Color for success messages */
+    margin-top: 1em;
+    /* Spacing above success messages */
+    text-align: center;
+    /* Center the success message text */
+}
+
+.error-message {
+    color: red;
+    /* Color for error messages */
+    margin-top: 1em;
+    /* Spacing above error messages */
+    text-align: center;
+    /* Center the error message text */
+}

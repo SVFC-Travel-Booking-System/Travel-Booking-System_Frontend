@@ -1,0 +1,13 @@
+<div class="itinerary-container">
+    <div class="itinerary-header">
+        <h2>Your Itinerary</h2>
+    </div>
+    <ul class="itinerary-list">
+        <li *ngFor="let itinerary of itineraries" class="itinerary-item">
+            <span>{{ itinerary.destination }} - {{ itinerary.date }}</span>
+            <div class="itinerary-item-details" *ngIf="itinerary.details">
+                <p>{{ itinerary.details }}</p>
+            </div>
+        </li>
+    </ul>
+</div>

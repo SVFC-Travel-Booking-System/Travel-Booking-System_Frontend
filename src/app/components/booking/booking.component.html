@@ -1,0 +1,16 @@
+<div class="booking-container">
+    <h2>Book Your Travel</h2>
+    <form (ngSubmit)="onBook()">
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" [(ngModel)]="bookingDetails.name" placeholder="Your Name" name="name" required />
+        </div>
+
+        <div class="form-group">
+            <label for="date">Travel Date</label>
+            <input type="date" [(ngModel)]="bookingDetails.date" name="date" required />
+        </div>
+
+        <button type="submit">Book Now</button>
+    </form>
+</div>

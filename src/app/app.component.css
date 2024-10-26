@@ -1,0 +1,73 @@
+/* Navigation Bar */
+
+nav {
+    background-color: #5499c7;
+    padding: 1em;
+    display: flex;
+    /* Align items in a row */
+    align-items: center;
+    /* Center vertically */
+    justify-content: space-between;
+    /* Space out the logo and links */
+}
+
+
+/* Logo Styling */
+
+nav .logo-container {
+    display: flex;
+    /* Use flex to align logo */
+    align-items: center;
+    /* Center the logo vertically */
+}
+
+nav .logo {
+    width: 80px;
+    /* Adjust the size of the logo */
+    height: auto;
+}
+
+
+/* Navigation Links */
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Navigation Links Styling */
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+
+/* Hover and Active Link Styles */
+
+nav a:hover {
+    background-color: #3498db;
+}
+
+nav a.active {
+    background-color: #1c6690;
+    /* Different color for active link */
+}
+
+
+/* Footer Styling */
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #5499c7;
+    color: white;
+    margin-top: 2em;
+}

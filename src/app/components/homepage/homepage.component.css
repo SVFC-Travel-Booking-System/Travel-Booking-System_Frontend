@@ -1,0 +1,24 @@
+.card {
+    background-color: #a9cce3;
+    /* Set your desired background color here */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    /* Optional: adds rounded corners to the card */
+    padding: 1em;
+    /* Adds padding inside the card for spacing */
+}
+
+.card-img-top {
+    width: 50%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1200px;
+}
