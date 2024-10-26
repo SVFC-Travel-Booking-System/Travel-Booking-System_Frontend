@@ -67,7 +67,7 @@
 }
 
 .review-form button {
-    background-color: #2980b9;
+    background-color: #28a745;
     /* Button background color */
     color: white;
     /* Button text color */
@@ -84,7 +84,7 @@
 }
 
 .review-form button:hover {
-    background-color: #3498db;
+    background-color: #218838;
     /* Lighter shade on hover */
 }
 

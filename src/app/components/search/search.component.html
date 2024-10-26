@@ -1,15 +1,22 @@
 <div class="search-container">
-    <h2>Find Your Travel Destination</h2>
-    <input type="text" [(ngModel)]="destination" placeholder="Enter destination" />
-    <button (click)="onSearch()">Search</button>
+    <h2 class="search-title">Search Travel Options</h2>
+    <form (ngSubmit)="onSearch()" class="search-form">
+        <input type="text" placeholder="Enter destination" [(ngModel)]="destination" name="destination" required />
+        <button type="submit" [disabled]="loading">Search</button>
+    </form>
 
-    <div *ngIf="results.length > 0">
-        <h3>Search Results:</h3>
-        <ul class="results-list">
-            <li *ngFor="let result of results" class="result-item">
-                <span>{{ result.name }} - ${{ result.price }}</span>
-                <button (click)="book(result)">Book Now</button>
-            </li>
-        </ul>
+    <div *ngIf="loading">Loading results...</div>
+    <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+
+    <div class="results" *ngIf="results.length > 0">
+        <div *ngFor="let result of results" class="result-card">
+            <h3 class="result-title">{{ result.name }}</h3>
+            <p class="result-description">{{ result.description }}</p>
+            <button (click)="book(result)">Book Now</button>
+        </div>
+    </div>
+
+    <div *ngIf="results.length === 0 && !loading && !errorMessage">
+        <p>No results found.</p>
     </div>
 </div>
